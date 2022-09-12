@@ -7,7 +7,11 @@ class QuestionsController < ApplicationController
   def answer
     if params[:question]
       @question = params[:question]
+    else
+      return
     end
+
+
 
     @answer = ANSWERS.sample
   end

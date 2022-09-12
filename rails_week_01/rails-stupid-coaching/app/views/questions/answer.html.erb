@@ -1,13 +1,19 @@
 <h1>Answer</h1>
 
-<div>
-  <h2>You question is:</h2>
-  <p><%= @question %></p>
-</div>
+<% if !@question.size.zero? %>
+  <div>
+    <h2>You question is:</h2>
+    <p><%= @question %></p>
+  </div>
 
-<div>
-  <h2>Stupid answer is:</h2>
-  <p><%= @answer %></p>
-</div>
+  <div>
+    <h2>Stupid answer is:</h2>
+    <p><%= @answer %></p>
+  </div>
+<% else %>
+  <div>
+    <h2>Your question is empty!</h2>
+  </div>
+<% end%>
 
 <%= link_to "Ask one more question", ask_path %>
