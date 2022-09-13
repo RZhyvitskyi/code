@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 80rem;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+a {
+  font-size: 1.8rem;
+
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+input {
+  padding: 1rem;
+  width: 25rem;
+  font-size: 1.8rem;
+}
+
+button {
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #000;
+}
+

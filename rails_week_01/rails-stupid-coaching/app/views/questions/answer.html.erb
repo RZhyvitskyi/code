@@ -1,21 +1,21 @@
-<div class="container">
+<div class="question__wrapper">
   <h1>Answer</h1>
 
   <% if !@question.size.zero? %>
-    <div class="">
+    <div class="question">
       <h2>You question is:</h2>
       <p><%= @question %></p>
     </div>
 
-    <div>
+    <div class="answer">
       <h2>Stupid answer is:</h2>
       <p><%= @answer %></p>
     </div>
   <% else %>
-    <div>
+    <div class="error">
       <h2>Your question field is empty!</h2>
     </div>
   <% end%>
-  
-<%= link_to "Ask one more question", ask_path %>
+  <button><%= link_to "Back", ask_path %></button>
 </div>
+
