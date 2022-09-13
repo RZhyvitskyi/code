@@ -5,14 +5,15 @@ class QuestionsController < ApplicationController
   end
 
   def answer
-    if params[:question]
-      @question = params[:question]
+    @question = params[:question].downcase
+
+    case @question
+    when "hello"
+      @answer = "Hello, there"
+    when /time/
+      @answer = Time.now
     else
-      return
+      @answer = ANSWERS.sample
     end
-
-
-
-    @answer = ANSWERS.sample
   end
 end

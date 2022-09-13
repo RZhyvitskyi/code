@@ -1238,3 +1238,521 @@ Processing by QuestionsController#answer as HTML
 Completed 200 OK in 5ms (Views: 4.4ms | Allocations: 2607)
 
 
+Started GET "/answer?question=ghik" for 127.0.0.1 at 2022-09-12 15:35:53 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>"ghik"}
+Completed 500 Internal Server Error in 5ms (Allocations: 2959)
+
+
+  
+NoMethodError (undefined method `include?' for #<QuestionsController:0x0000000000f550>
+
+    when include?("time")
+         ^^^^^^^^):
+  
+app/controllers/questions_controller.rb:13:in `answer'
+Started GET "/answer?question=ghik" for 127.0.0.1 at 2022-09-12 15:36:06 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>"ghik"}
+Completed 500 Internal Server Error in 5ms (Allocations: 2937)
+
+
+  
+NoMethodError (undefined method `includes?' for #<QuestionsController:0x00000000010338>
+
+    when includes?("time")
+         ^^^^^^^^^
+Did you mean?  include_content?):
+  
+app/controllers/questions_controller.rb:13:in `answer'
+Started GET "/answer?question=ghik" for 127.0.0.1 at 2022-09-12 15:36:52 +0200
+  
+SyntaxError (/Users/rostyslavzhyvitskyi/code/rails_week_01/rails-stupid-coaching/app/controllers/questions_controller.rb:13: syntax error, unexpected '.'
+    when .include?("time")
+         ^
+):
+  
+app/controllers/questions_controller.rb:13: syntax error, unexpected '.'
+app/controllers/questions_controller.rb:13: syntax error, unexpected '.'
+app/controllers/questions_controller.rb:13: syntax error, unexpected '.'
+Started GET "/answer?question=ghik" for 127.0.0.1 at 2022-09-12 15:37:10 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>"ghik"}
+Completed 500 Internal Server Error in 6ms (Allocations: 3021)
+
+
+  
+NoMethodError (undefined method `include?' for #<QuestionsController:0x00000000011ee0>
+
+    when self.include?("time")
+             ^^^^^^^^^):
+  
+app/controllers/questions_controller.rb:13:in `answer'
+Started GET "/answer?question=ghik" for 127.0.0.1 at 2022-09-12 15:39:06 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>"ghik"}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 13121)
+Completed 200 OK in 21ms (Views: 20.8ms | Allocations: 13746)
+
+
+Started GET "/ask" for 127.0.0.1 at 2022-09-12 15:39:09 +0200
+Processing by QuestionsController#ask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/ask.html.erb within layouts/application
+  Rendered questions/ask.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2348)
+Completed 200 OK in 6ms (Views: 5.1ms | Allocations: 2603)
+
+
+Started GET "/answer?question=time" for 127.0.0.1 at 2022-09-12 15:39:11 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>"time"}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2358)
+Completed 200 OK in 5ms (Views: 4.4ms | Allocations: 2619)
+
+
+Started GET "/ask" for 127.0.0.1 at 2022-09-12 15:39:13 +0200
+Processing by QuestionsController#ask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/ask.html.erb within layouts/application
+  Rendered questions/ask.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2328)
+Completed 200 OK in 4ms (Views: 3.6ms | Allocations: 2569)
+
+
+Started GET "/answer?question=asdsaf+time+adfa" for 127.0.0.1 at 2022-09-12 15:39:17 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>"asdsaf time adfa"}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2387)
+Completed 200 OK in 5ms (Views: 4.2ms | Allocations: 2646)
+
+
+Started GET "/answer?question=asdsaftimee+adfa" for 127.0.0.1 at 2022-09-12 15:39:22 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>"asdsaftimee adfa"}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2366)
+Completed 200 OK in 5ms (Views: 4.0ms | Allocations: 2625)
+
+
+Started GET "/answer?question=hello" for 127.0.0.1 at 2022-09-12 15:39:29 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>"hello"}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.1ms | Allocations: 46)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2381)
+Completed 200 OK in 5ms (Views: 4.0ms | Allocations: 2636)
+
+
+Started GET "/ask" for 127.0.0.1 at 2022-09-12 15:39:31 +0200
+Processing by QuestionsController#ask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/ask.html.erb within layouts/application
+  Rendered questions/ask.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2343)
+Completed 200 OK in 5ms (Views: 4.3ms | Allocations: 2584)
+
+
+Started GET "/answer?question=dsfsdf" for 127.0.0.1 at 2022-09-12 15:39:33 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>"dsfsdf"}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.1ms | Allocations: 46)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2390)
+Completed 200 OK in 5ms (Views: 3.9ms | Allocations: 2646)
+
+
+Started GET "/ask" for 127.0.0.1 at 2022-09-12 15:39:36 +0200
+Processing by QuestionsController#ask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/ask.html.erb within layouts/application
+  Rendered questions/ask.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2334)
+Completed 200 OK in 9ms (Views: 8.5ms | Allocations: 2576)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:39:37 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2370)
+Completed 200 OK in 5ms (Views: 4.6ms | Allocations: 2625)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:39:51 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 1.3ms | Allocations: 313)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3089)
+Completed 200 OK in 11ms (Views: 9.9ms | Allocations: 3887)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:40:45 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.8ms | Allocations: 315)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3070)
+Completed 200 OK in 10ms (Views: 8.8ms | Allocations: 3863)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:40:54 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.9ms | Allocations: 323)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3087)
+Completed 200 OK in 11ms (Views: 9.7ms | Allocations: 3880)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:41:17 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2358)
+Completed 200 OK in 6ms (Views: 5.1ms | Allocations: 2628)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:41:18 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2367)
+Completed 200 OK in 9ms (Views: 8.4ms | Allocations: 2623)
+
+
+Started GET "/ask" for 127.0.0.1 at 2022-09-12 15:41:19 +0200
+Processing by QuestionsController#ask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/ask.html.erb within layouts/application
+  Rendered questions/ask.html.erb within layouts/application (Duration: 6.1ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 2448)
+Completed 200 OK in 13ms (Views: 11.8ms | Allocations: 2742)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:41:30 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2373)
+Completed 200 OK in 5ms (Views: 4.6ms | Allocations: 2628)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:41:46 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.7ms | Allocations: 329)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3093)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 3869)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:41:50 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2376)
+Completed 200 OK in 7ms (Views: 5.6ms | Allocations: 2646)
+
+
+Started GET "/ask" for 127.0.0.1 at 2022-09-12 15:41:52 +0200
+Processing by QuestionsController#ask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/ask.html.erb within layouts/application
+  Rendered questions/ask.html.erb within layouts/application (Duration: 1.0ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2439)
+Completed 200 OK in 8ms (Views: 7.0ms | Allocations: 2733)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:41:54 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2370)
+Completed 200 OK in 4ms (Views: 3.8ms | Allocations: 2625)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-e0cf9d8fcb18bf7f909d8d91a5e78499f82ac29523d475bf3a9ab265d5e2b451.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-e0cf9d8fcb18bf7f909d8d91a5e78499f82ac29523d475bf3a9ab265d5e2b451.css"):
+  
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:42:15 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2384)
+Completed 200 OK in 5ms (Views: 4.8ms | Allocations: 2638)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-b36c4a9a5ad6a74e1b5d6d1f08edbfff2d5485cce4915187d99a62436df4fc0e.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-b36c4a9a5ad6a74e1b5d6d1f08edbfff2d5485cce4915187d99a62436df4fc0e.css"):
+  
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:42:45 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.5ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2365)
+Completed 200 OK in 6ms (Views: 5.6ms | Allocations: 2619)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-b14961e82db78c6acc6decf3e5b2b72341b6699f5bd50561bbd44ac051e52561.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-b14961e82db78c6acc6decf3e5b2b72341b6699f5bd50561bbd44ac051e52561.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-b14961e82db78c6acc6decf3e5b2b72341b6699f5bd50561bbd44ac051e52561.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-b14961e82db78c6acc6decf3e5b2b72341b6699f5bd50561bbd44ac051e52561.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-b14961e82db78c6acc6decf3e5b2b72341b6699f5bd50561bbd44ac051e52561.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-b14961e82db78c6acc6decf3e5b2b72341b6699f5bd50561bbd44ac051e52561.css"):
+  
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:45:17 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2452)
+Completed 200 OK in 6ms (Views: 5.1ms | Allocations: 2706)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-8b87659d55ae9c1b81c16427666dd6f871e8e23e1beac62be49e92959f25dd68.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-8b87659d55ae9c1b81c16427666dd6f871e8e23e1beac62be49e92959f25dd68.css"):
+  
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:45:25 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2442)
+Completed 200 OK in 6ms (Views: 5.7ms | Allocations: 2696)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:45:27 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2424)
+Completed 200 OK in 6ms (Views: 5.6ms | Allocations: 2678)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-24680f3a9e1caf30383c82986b1b541391c7ddcc7ca37519a5584e42264295ae.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-24680f3a9e1caf30383c82986b1b541391c7ddcc7ca37519a5584e42264295ae.css"):
+  
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:45:33 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2453)
+Completed 200 OK in 7ms (Views: 6.4ms | Allocations: 2708)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-459c8d67d4057c36ee2bb585f54b0587ffcf76d6d03bdc6b0a906882a14d375b.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-459c8d67d4057c36ee2bb585f54b0587ffcf76d6d03bdc6b0a906882a14d375b.css"):
+  
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:52:58 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2454)
+Completed 200 OK in 8ms (Views: 7.4ms | Allocations: 2708)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:53:00 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2423)
+Completed 200 OK in 6ms (Views: 5.5ms | Allocations: 2677)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:53:00 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2438)
+Completed 200 OK in 7ms (Views: 6.1ms | Allocations: 2693)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-dbb6321e9bc39b14267d52348bdbbb29872fea40e7ac61c948fd502aff0da8b1.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-dbb6321e9bc39b14267d52348bdbbb29872fea40e7ac61c948fd502aff0da8b1.css"):
+  
+
+NameError: constant WebConsole::SourceLocation not defined
+
+          source_location = SourceLocation.new(binding)
+                            ^^^^^^^^^^^^^^
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/exception_mapper.rb:51:in `block in guess_the_first_application_binding'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/exception_mapper.rb:50:in `each'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/exception_mapper.rb:50:in `find'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/exception_mapper.rb:50:in `guess_the_first_application_binding'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/exception_mapper.rb:30:in `first'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/session.rb:48:in `initialize'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/session.rb:34:in `new'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/session.rb:34:in `from'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/middleware.rb:30:in `block in call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/middleware.rb:17:in `catch'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/middleware.rb:17:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.4/lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/rack/logger.rb:40:in `call_app'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/rack/logger.rb:25:in `block in call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/rack/logger.rb:25:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/sprockets-rails-3.4.2/lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/logger_silence.rb:18:in `block in silence'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/logger_thread_safe_level.rb:43:in `log_at'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/logger_silence.rb:18:in `silence'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/logger.rb:64:in `block (3 levels) in broadcast'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/logger_silence.rb:18:in `block in silence'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/logger_thread_safe_level.rb:43:in `log_at'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/logger_silence.rb:18:in `silence'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/logger.rb:62:in `block (2 levels) in broadcast'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/sprockets-rails-3.4.2/lib/sprockets/rails/quiet_assets.rb:11:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.4/lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.4/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/rack-2.2.4/lib/rack/method_override.rb:24:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.4/lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.4/lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.4/lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/rack-livereload-0.3.17/lib/rack/livereload.rb:23:in `_call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/rack-livereload-0.3.17/lib/rack/livereload.rb:14:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.4/lib/action_dispatch/middleware/static.rb:23:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.4/lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/engine.rb:530:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/puma-5.6.5/lib/puma/configuration.rb:252:in `call'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/puma-5.6.5/lib/puma/request.rb:77:in `block in handle_request'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/puma-5.6.5/lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/puma-5.6.5/lib/puma/request.rb:76:in `handle_request'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/puma-5.6.5/lib/puma/server.rb:443:in `process_client'
+	from /Users/rostyslavzhyvitskyi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/puma-5.6.5/lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:53:46 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 1.4ms | Allocations: 381)
+  Rendered layout layouts/application.html.erb (Duration: 100.1ms | Allocations: 32187)
+Completed 200 OK in 103ms (Views: 101.7ms | ActiveRecord: 0.0ms | Allocations: 33340)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-20fb54b9a287e1f472cd06c93bc7f49eabaaa6e6f4a31a4f32f642869419048b.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-20fb54b9a287e1f472cd06c93bc7f49eabaaa6e6f4a31a4f32f642869419048b.css"):
+  
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:54:35 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 1.1ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 103.1ms | Allocations: 35943)
+Completed 200 OK in 110ms (Views: 106.2ms | ActiveRecord: 0.0ms | Allocations: 38163)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:54:43 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3920)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 4245)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:54:45 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.3ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2383)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 2644)
+
+
+Started GET "/answer?question=" for 127.0.0.1 at 2022-09-12 15:54:50 +0200
+Processing by QuestionsController#answer as HTML
+  Parameters: {"question"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering questions/answer.html.erb within layouts/application
+  Rendered questions/answer.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 2667)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 2928)
+
+
