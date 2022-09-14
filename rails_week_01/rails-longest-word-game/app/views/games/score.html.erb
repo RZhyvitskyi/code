@@ -1,5 +1,11 @@
 <% if @result %>
-  <%= "You words" %>
+  <%= "You word is: #{@word}" %>
+  <br>
+  <br>
+  <%= @valid_word["found"] ? "It's a valid english word" : "It's not a valid english word" %>
 <% else %>
-  <%= "Wrong word" %>
+  <%= "Wrong word: #{@word}" %>
 <% end %>
+<br>
+<br>
+<%= "It took you: #{@time_result.round(2)} seconds" %>

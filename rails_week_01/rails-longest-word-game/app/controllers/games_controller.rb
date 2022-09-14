@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
   def new
+    @time = Time.now
     @letters = []
     number_of_letters = rand(5..10)
 
@@ -11,6 +12,10 @@ class GamesController < ApplicationController
   def score
     @word = params[:word]
     @letters = params[:letters].split(' ')
+    @time = params[:time]
+    @time_result = Time.now - Time.parse(@time)
+
+    p @valid_word = validate_word(@word)
 
     @result = valid_word?(@word, @letters)
   end
@@ -29,5 +34,11 @@ class GamesController < ApplicationController
         answer_hash[letter] > grid_hash[letter]
       end
     end
+  end
+
+  def validate_word(word)
+    url = "https://wagon-dictionary.herokuapp.com/#{word}"
+
+    JSON.parse(Faraday.get(url).body)
   end
 end
