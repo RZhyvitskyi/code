@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
 
     case @question
     when "hello"
-      @answer = "Hello, there"
+      @answer = "I don't care, get dressed and go to work!"
     when /time/
       @answer = Time.now
     else
