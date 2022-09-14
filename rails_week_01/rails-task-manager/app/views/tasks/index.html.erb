@@ -4,9 +4,12 @@
     <li>
       <%= form_with model: task do |f| %>
         <%= f.check_box :completed, onchange: "this.form.submit();"%>
-        <%= link_to task.title, task_path(task) %>
       <% end %>
+      <%= link_to task.title, task_path(task) %>
+      <br>
+      <%= link_to "Edit", edit_task_path(task) %>
     </li>
+    <br>
   <% end %>
 </ul>
 <br>

@@ -4,7 +4,9 @@
 <p>
   <%= @task.details%>
 </p>
-<%= check_box_tag @task.id, 1, @task.completed %>
+<%= check_box_tag @task.id, @task.completed, @task.completed %>
+<br>
+<%= link_to "Delete", task_path(@task), data: {turbo_method: :delete} %>
 <br>
 <br>
 <%= link_to "Back", tasks_path %>
