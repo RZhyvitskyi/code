@@ -1,5 +1,5 @@
-<h1><%= @task.title %></h1>
-<br>
+<%= link_to "Back", tasks_path, class: "link__back" %>
+<div class="content">
+  <h2><%= @task.title %></h2>
   <%= render "form", task: @task %>
-<br>
-<%= link_to "Back", tasks_path %>
+</div>
