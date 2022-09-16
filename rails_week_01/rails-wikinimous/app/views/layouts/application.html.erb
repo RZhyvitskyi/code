@@ -11,16 +11,12 @@
   </head>
 
   <body>
-
-    <div class="wrapper">
+    <div class="d-flex flex-column min-vh-100"">
         <%= render "layouts/header" %>
 
-      <div class="container">
         <%= yield %>
-      </div>
 
         <%= render "layouts/footer" %>
     </div>
-
   </body>
 </html>
