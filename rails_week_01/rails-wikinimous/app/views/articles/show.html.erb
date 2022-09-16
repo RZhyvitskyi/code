@@ -1,0 +1,13 @@
+<%= link_to "Back", articles_path, class: "link__back" %>
+<div class="content">
+  <div class="article">
+    <h2>
+      <%= @article.title %>
+    </h2>
+    <p>
+      <%= @article.content%>
+    </p>
+    <%= image_tag @article.image_url %>
+    <%= link_to "Delete", article_path(@article), data: {turbo_method: :delete}, class: "link__delete" %>
+  </div>
+</div>

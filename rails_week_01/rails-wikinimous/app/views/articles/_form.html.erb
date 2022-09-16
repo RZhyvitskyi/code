@@ -1,0 +1,15 @@
+<%= form_with model: article, class: "form-control" do |f| %>
+  <div class="mb-3">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+  <%= f.submit %>
+<% end %>
