@@ -14,7 +14,9 @@
     <div class="d-flex flex-column min-vh-100"">
         <%= render "layouts/header" %>
 
-        <%= yield %>
+        <div class="container p-4 p-md-5">
+          <%= yield %>
+        </div>
 
         <%= render "layouts/footer" %>
     </div>
