@@ -1,11 +1,11 @@
-<%= link_to "New article", new_article_path, class: "link__new" %>
-<div class="content">
+<%= link_to "New article", new_article_path, class: "btn btn-secondary" %>
+<div class="d-flex flex-column gap-3 py-3">
   <h2>My article</h2>
-  <ul class="article">
+  <ul class="list-group">
     <% @articles.each do |article| %>
-      <li class="article__item">
-        <%= link_to article.title, article_path(article) %>
-        <%= link_to "Edit", edit_article_path(article), class: "link__edit" %>
+      <li class="list-group-item w-25 d-flex justify-content-between align-items-center">
+        <%= link_to article.title, article_path(article), class: "text-secondary text-decoration-none" %>
+        <%= link_to "Edit", edit_article_path(article), class: "btn btn-primary" %>
       </li>
     <% end %>
   </ul>
