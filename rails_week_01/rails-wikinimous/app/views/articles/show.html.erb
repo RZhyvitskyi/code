@@ -1,13 +1,11 @@
-<%= link_to "Back", articles_path, class: "link__back" %>
-<div class="content">
-  <div class="article">
-    <h2>
-      <%= @article.title %>
-    </h2>
-    <p>
-      <%= @article.content%>
-    </p>
-    <%= image_tag @article.image_url %>
-    <%= link_to "Delete", article_path(@article), data: {turbo_method: :delete}, class: "link__delete" %>
-  </div>
+<%= link_to "Back", articles_path, class: "btn btn-secondary" %>
+<div class="d-flex gap-2 align-items-start flex-column py-3">
+  <h2 class="m-0">
+    <%= @article.title %>
+  </h2>
+  <p class="m-0">
+    <%= @article.content%>
+  </p>
+  <%= image_tag @article.image_url, class: "w-75 mb-3" %>
+  <%= link_to "Delete", article_path(@article), data: {turbo_method: :delete}, class: "btn btn-secondary" %>
 </div>
