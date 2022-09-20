@@ -1,0 +1,10 @@
+<h2>Flat</h2>
+
+<div class="row">
+  <% @flats.each do |flat| %>
+    <%= render flat, flat: flat %>
+    <div class="mb-5">
+      <%= link_to "Show this flat", flat, class: "btn btn-secondary" %>
+    </div>
+  <% end %>
+</div>

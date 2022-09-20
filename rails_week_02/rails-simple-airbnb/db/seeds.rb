@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+puts 'Cleaning database...'
+Flat.destroy_all
+
+puts 'Creating restaurants...'
+
+flats = [
+  { name: 'Dishoom', address: '7 Boundary St, London E2 7JE', description: "Some description", price_per_night: 100, number_of_guests: 10 },
+  { name: 'Pizza East', address: '56A Shoreditch High St, London E1 6PQ', description: "Some description", price_per_night: 120, number_of_guests: 3 }
+]
+
+flats.each do |attributes|
+  flat = Flat.create!(attributes)
+  puts "Created #{flat.name}"
+end
+
+puts 'Finished!'
