@@ -10,8 +10,8 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><%= link_to "Home", home_path, class: "nav-link #{"active" if current_page?(home_path) || current_page?(root_path)}" %></li>
-          <li class="nav-item"><%= link_to "Articles", restaurants_path, class: "nav-link #{"active" if current_page?(restaurants_path)}" %></li>
-          <li class="nav-item"><%= link_to "New article", new_restaurant_path, class: "nav-link #{"active" if current_page?(new_restaurant_path)}" %></li>
+          <li class="nav-item"><%= link_to "Restaurants", restaurants_path, class: "nav-link #{"active" if current_page?(restaurants_path)}" %></li>
+          <li class="nav-item"><%= link_to "New restaurant", new_restaurant_path, class: "nav-link #{"active" if current_page?(new_restaurant_path)}" %></li>
           <li class="nav-item"><%= link_to "About", about_path, class: "nav-link #{"active" if current_page?(about_path)}" %></li>
         </ul>
       </div>

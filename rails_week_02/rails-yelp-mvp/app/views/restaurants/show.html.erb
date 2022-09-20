@@ -3,15 +3,18 @@
 <%= render @restaurant %>
 
 <p><strong>Reviews</strong></p>
-<ul class="list-group">
+<ul class="list-group mb-3">
   <% @restaurant.reviews.each do |review| %>
     <li class="list-group-item">
       <%= review.content %>
     </li>
   <% end %>
 </ul>
-<%= link_to "Create new review", new_restaurant_review_path(@restaurant) %>
+
+<div class="mb-5">
+<%= link_to "Create new review", new_restaurant_review_path(@restaurant), class: "btn btn-primary " %>
+</div>
 
 <div>
-  <%= link_to "Back to restaurants", restaurants_path %>
+  <%= link_to "Back to restaurants", restaurants_path, class: "btn btn-secondary" %>
 </div>

@@ -2,13 +2,13 @@
 
 <h1 class="text-center">Restaurants</h1>
 
-<div>
+<ul class="list-group">
   <% @restaurants.each do |restaurant| %>
     <%= render restaurant %>
-    <p>
-      <%= link_to "Show this restaurant", restaurant %>
-    </p>
+    <div class="mb-5">
+      <%= link_to "Show this restaurant", restaurant, class: "btn btn-secondary" %>
+    </div>
   <% end %>
-</div>
+</ul>
 
-<%= link_to "New restaurant", new_restaurant_path %>
+<%= link_to "New restaurant", new_restaurant_path, class: "btn btn-primary" %>

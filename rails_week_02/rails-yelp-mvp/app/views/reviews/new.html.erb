@@ -1,6 +1,8 @@
 <h1>New review</h1>
 <%= simple_form_for [@restaurant, @review] do |f| %>
-  <%= f.input :content %>
-  <%= f.input :rating %>
-  <%= f.submit "Submit review", class: "btn btn-primary" %>
+  <div class="form-inputs d-flex flex-column align-items-start">
+    <%= f.input :content %>
+    <%= f.input :rating, as: :integer %>
+    <%= f.submit "Submit review", class: "btn btn-primary" %>
+  </div>
 <% end %>
