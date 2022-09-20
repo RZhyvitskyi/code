@@ -1,9 +1,15 @@
 <%= form_with model: flat, class: "d-flex flex-column align-items-start gap-2" do |f| %>
+  <%= f.label "Flat name:" %>
   <%= f.text_field :name %>
+  <%= f.label "Address:" %>
   <%= f.text_field :address %>
+  <%= f.label "Price (usd/night):" %>
   <%= f.text_field :price_per_night %>
+  <%= f.label "Number of guests" %>
   <%= f.text_field :number_of_guests %>
+  <%= f.label "Picture url" %>
   <%= f.text_field :picture_url %>
-  <%= f.text_area :description, size: "60x10" %>
+  <%= f.label "Description" %>
+  <%= f.text_area :description, size: "30x5" %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>

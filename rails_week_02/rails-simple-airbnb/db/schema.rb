@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_20_121043) do
     t.integer "number_of_guests"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "picture_url"
+    t.string "picture_url", default: "https://picsum.photos/id/99/1200"
   end
 
   create_table "reviews", force: :cascade do |t|

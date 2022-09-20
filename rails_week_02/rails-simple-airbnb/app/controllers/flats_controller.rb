@@ -13,6 +13,12 @@ class FlatsController < ApplicationController
   end
 
   def create
+    @flat = Flat.new(flat_params)
+    if @flat.save
+      redirect_to @flat, notice: 'Flat was successfully created.'
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit
@@ -27,8 +33,8 @@ class FlatsController < ApplicationController
   end
 
   def destroy
-    # @task.destroy
-    # redirect_to tasks_path, status: :see_other
+    @flat.destroy
+    redirect_to flats_path, status: :see_other
   end
 
   # private
