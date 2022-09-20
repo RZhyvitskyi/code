@@ -1,2 +1,12 @@
-<h1>Flats#show</h1>
-<p>Find me in app/views/flats/show.html.erb</p>
+<h2>Flat info</h2>
+<div class="d-flex flex-column mb-3">
+  <h3><%= @flat.name %></h3>
+  <p>Price: <%= @flat.price_per_night %></p>
+
+  <%= image_tag @flat.picture_url %>
+</div>
+
+<div class="control">
+  <%= link_to "Edit this flat", edit_flat_path, class: "btn btn-primary" %>
+  <%= link_to "Delete this flat", flat_path(@flat), data: {turbo_method: :delete}, class: "btn btn-danger" %>
+</div>
