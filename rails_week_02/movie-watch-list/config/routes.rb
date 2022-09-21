@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'bookmarks/new'
   devise_for :users do
   end
   
