@@ -1,4 +1,10 @@
 <div class="col-md-4">
-  <h3><%= flat.name %></h3>
-  <p><%= flat.price_per_night %></p>
+  <div class="card">
+    <%= image_tag flat.picture_url, class: "card-img-top" %>
+    <div class="card-body">
+      <h5 class="card-title"><%= flat.name %></h5>
+      <p class="card-text"><%= flat.price_per_night %></p>
+      <%= link_to "Show this flat", flat, class: "btn btn-secondary" %>
+    </div>
+  </div>
 </div>
