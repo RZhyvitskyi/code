@@ -1,0 +1,20 @@
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <div class="bg-primary p-2">
+        <h1><%= link_to "IIIKarnov Academy", root_path, class: "navbar-brand m-0 fs-4" %></h1>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><%= link_to "Home", home_path, class: "nav-link #{"active" if current_page?(home_path) || current_page?(root_path)}" %></li>
+          <li class="nav-item"><%= link_to "Flats", flats_path, class: "nav-link #{"active" if current_page?(flats_path)}" %></li>
+          <li class="nav-item"><%= link_to "New flat", new_flat_path, class: "nav-link #{"active" if current_page?(new_flat_path)}" %></li>
+          <li class="nav-item"><%= link_to "About", about_path, class: "nav-link #{"active" if current_page?(about_path)}" %></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
