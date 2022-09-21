@@ -1,11 +1,14 @@
 class FlatsController < ApplicationController
-  before_action :get_flat, only: [:show, :edit, :update, :destroy]
+  before_action :get_flat, only: [ :edit, :update, :destroy]
 
   def index
     @flats = Flat.all
   end
 
   def show
+    @flat = Flat.find(params[:id])
+    @reviews = @flat.reviews
+    @review = Review.new
   end
 
   def new
@@ -45,5 +48,9 @@ class FlatsController < ApplicationController
 
   def get_flat
     @flat = Flat.find(params[:id])
+  end
+
+  def get_reviews
+    @reviews = @flat.reviews
   end
 end

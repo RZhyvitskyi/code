@@ -1,9 +1,14 @@
-<h2>Flat info</h2>
+<h2 class="mb-5">Flat info</h2>
 <div class="d-flex flex-column mb-3">
   <h3><%= @flat.name %></h3>
+  <p><%= @flat.address %></p>
   <p>Price: <%= @flat.price_per_night %></p>
 
-  <%= image_tag @flat.picture_url %>
+  <%= image_tag @flat.picture_url, class: "w-50 mb-3" %>
+  <% @reviews.each do |review| %>
+    <%= render "reviews/review", review: review %>
+  <% end %>
+  <%= render "reviews/new_review", review: @review, flat: @flat %>
 </div>
 
 <div class="control">

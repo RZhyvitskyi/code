@@ -1,0 +1,10 @@
+<div class="card mb-3">
+  <div class="card-header">
+    Review
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= review.rating %></h5>
+    <p class="card-text"><%= review.content %></p>
+    <%= link_to "Delete this review", review_path(review), data: {turbo_method: :delete}, class: "btn btn-danger" %>
+  </div>
+</div>

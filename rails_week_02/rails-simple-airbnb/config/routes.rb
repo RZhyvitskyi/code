@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   get "/about", to: "pages#about", as: "about"
 
   resources :flats do
-    resources :reviews, shallow: true, only: %i[create update delete]
+    resources :reviews, shallow: true, only: %i[create destroy]
   end
 end
