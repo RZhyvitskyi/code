@@ -12,8 +12,8 @@ Restaurant.destroy_all
 puts 'Creating restaurants...'
 
 restaurants = [
-  { name: 'Dishoom', address: '7 Boundary St, London E2 7JE', category: 'chinese', image_url: "https://picsum.photos/id/#{rand(1..100)}/1200" },
-  { name: 'Pizza East', address: '56A Shoreditch High St, London E1 6PQ', category: 'italian', image_url: "https://picsum.photos/id/#{rand(1..100)}/1200" }
+  { name: 'Dishoom', address: '7 Boundary St, London E2 7JE', category: 'chinese' },
+  { name: 'Pizza East', address: '56A Shoreditch High St, London E1 6PQ', category: 'italian' }
 ]
 
 restaurants.each do |attributes|
