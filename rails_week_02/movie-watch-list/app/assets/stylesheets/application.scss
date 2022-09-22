@@ -2,3 +2,9 @@ $primary: #FED506;
 $secondary: #00053C;
 
 @import "bootstrap";
+
+.card_delete {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
