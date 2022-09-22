@@ -13,6 +13,13 @@
           <li class="nav-item"><%= link_to "Lists", lists_path, class: "nav-link #{"active" if current_page?(lists_path)}" %></li>
           <li class="nav-item"><%= link_to "New list", new_list_path, class: "nav-link #{"active" if current_page?(new_list_path)}" %></li>
           <li class="nav-item"><%= link_to "About", about_path, class: "nav-link #{"active" if current_page?(about_path)}" %></li>
+          <li class="nav-item">
+            <% if user_signed_in? %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+            <% else %>
+              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <% end %>
+          </li>
         </ul>
       </div>
     </div>
