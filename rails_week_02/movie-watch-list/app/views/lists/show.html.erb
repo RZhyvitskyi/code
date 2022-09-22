@@ -4,6 +4,7 @@
     <li>
       <%= bookmark.movie.title %>
       <%= bookmark.comment %>
+      <%= button_to "Delete this list", bookmark, method: :delete, class: "btn btn-danger" %>
     </li>
   <% end %>
 </ul>

@@ -1,6 +1,6 @@
 class ListsController < ApplicationController
   before_action :get_user
-  before_action :get_list, only: [:show]
+  before_action :get_list, only: [:show, :destroy]
 
   def index
   end
@@ -21,6 +21,11 @@ class ListsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @list.destroy
+    redirect_to lists_path, status: :see_other
   end
 
   private

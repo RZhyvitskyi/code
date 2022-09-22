@@ -2,6 +2,10 @@
 <h3>Your lists:</h3>
 <ul>
   <% @user.lists.each do |list| %>
-    <li><%= link_to list.name, list %></li>
+    <li>
+      <%= link_to list.name, list %>
+      <%= button_to "Delete this list", list, method: :delete, class: "btn btn-danger" %>
+    </li>
   <% end %>
 </ul>
+<%= link_to "Add list", new_list_path, class: "btn btn-secondary" %>
