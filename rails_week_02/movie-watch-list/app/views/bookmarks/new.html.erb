@@ -1,13 +1,27 @@
-<h2>Movie list</h2>
-<ul>
+<h2 class="mb-5">Movie list</h2>
+<div class="mb-3 row row-cols-1 row-cols-md-2 g-3">
   <% @movies.each do |movie| %>
-    <li>
-      <%= form_with model: [@list, @bookmark], class: "d-flex flex-column align-items-start gap-2" do |f| %>
-        <%= f.label movie.title %>
-        <%= f.hidden_field :movie_id, value: movie.id %>
-        <%= f.text_field :comment %>
-        <%= f.submit class: "btn btn-primary" %>
-      <% end %>
-    </li>
+    <div class="col">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <%= image_tag movie.poster_url, class: "img-fluid rounded-start" %>
+          </div>
+          <div class="col-md-8 position-relative">
+            <div class="card-body">
+              <h5 class="card-title"><%= movie.title %></h5>
+              <p class="card-text mb-0">
+                <span class="text-muted">My comments:</span>
+                <%= form_with model: [@list, @bookmark], class: "d-flex flex-column align-items-start gap-2" do |f| %>
+                  <%= f.hidden_field :movie_id, value: movie.id %>
+                  <%= f.text_area(:comment, size: '25x2') %>
+                  <%= f.submit class: "btn btn-primary card_button" %>
+                <% end %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
