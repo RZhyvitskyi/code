@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
-    @movies = Movies.all
+    @movies = Movie.all
   end
 
   def show

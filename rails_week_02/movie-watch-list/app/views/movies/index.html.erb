@@ -1,0 +1,8 @@
+<h2 class="mb-5">Movies</h2>
+<div class="list-group mb-3">
+  <% @movies.each do |movie| %>
+    <%= link_to movie, class: "list-group-item w-50" do %>
+      <p class="card-title"><%= movie.title %></p>
+    <% end %>
+  <% end %>
+</div> 
