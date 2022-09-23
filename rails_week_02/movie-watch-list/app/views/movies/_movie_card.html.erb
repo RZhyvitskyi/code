@@ -1,14 +1,20 @@
 <div class="col">
   <div class="card mb-3">
     <div class="row g-0">
-      <div class="col-md-4">
-        <%= link_to movie, class: "text-decoration-none text-black" do %>
-          <%= image_tag movie.poster_url, class: "img-fluid rounded-start" %>
+      <div class="col-md-3">
+        <% if current_page?(new_list_bookmark_path(@list)) %>
+          <%= link_to movie_path(movie, ({list: list})), class: "text-decoration-none text-black" do %>
+            <%= image_tag movie.poster_url, class: "img-fluid rounded-start" %>
+          <% end %>
+        <% elsif %>
+          <%= link_to movie_path(movie), class: "text-decoration-none text-black" do %> 
+            <%= image_tag movie.poster_url, class: "img-fluid rounded-start" %>
+          <% end %>
         <% end %>
       </div>
-      <div class="col-md-8 position-relative">
+      <div class="col-md-9 position-relative">
         <div class="card-body">
-          <% if current_page?(new_list_bookmark_path(@list)) %>
+          <% if current_page?(new_list_bookmark_path(@list)) || current_page?(search_path(@list)) %>
             <%= link_to movie_path(movie, ({list: list})), class: "text-decoration-none text-black" do %>
               <h5 class="card-title"><%= movie.title %></h5>
             <% end %>
@@ -25,10 +31,10 @@
             <div class="card_button">
               <%= button_to "Delete bookmark", bookmark, method: :delete, class: "btn btn-danger" %>
             </div>
-          <% elsif current_page?(new_list_bookmark_path(@list)) %>
+          <% elsif current_page?(new_list_bookmark_path(@list)) || current_page?(search_path(@list)) %>
             <%= form_with model: [list, bookmark], class: "d-flex flex-column align-items-start gap-2" do |f| %>
               <%= f.hidden_field :movie_id, value: movie.id %>
-              <%= f.text_area(:comment, size: '25x2') %>
+              <%= f.text_area(:comment, size: '30x2') %>
               <%= f.submit class: "btn btn-primary card_button" %>
             <% end %>
           <% end %>

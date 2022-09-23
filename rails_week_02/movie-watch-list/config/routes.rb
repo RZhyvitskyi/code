@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     end
   end
 
+  get "/lists/:list_id/bookmarks/search", to: "bookmarks#search", as: "search"
+
   resources :movies, only: [:show, :index]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

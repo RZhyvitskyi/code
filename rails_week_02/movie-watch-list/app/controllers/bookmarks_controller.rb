@@ -1,12 +1,15 @@
 class BookmarksController < ApplicationController
   before_action :get_movies, only: [:new]
-  before_action :get_list, only: [:new]
+  before_action :get_list, only: [:new, :search]
 
   def new
     @bookmark = Bookmark.new
-    @movies = @movies.reject do |movie|
-      @list.bookmarks.any? { |bookmark| bookmark.movie_id == movie.id }
-    end
+  end
+
+  def search
+    @movies = Movie.search_by_title(params[:title])
+    @bookmark = Bookmark.new
+    render :new
   end
 
   def create
@@ -38,7 +41,8 @@ class BookmarksController < ApplicationController
   end
 
   def get_movies
-    @movies = Movie.all
+    get_list
+    @movies = Movie.not_in_list(@list)
   end
 
   def get_list

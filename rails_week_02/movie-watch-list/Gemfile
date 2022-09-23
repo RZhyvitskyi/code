@@ -32,6 +32,7 @@ gem 'guard-livereload'
 gem 'rack-livereload'
 gem 'sass-rails'
 gem 'bootstrap'
+gem 'pg_search'
 
 gem 'devise'
 
