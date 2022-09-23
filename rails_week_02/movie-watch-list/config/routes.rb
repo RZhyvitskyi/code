@@ -5,9 +5,11 @@ Rails.application.routes.draw do
 
   devise_for :users do
   end
-  
+
   resources :lists do
-    resources :bookmarks, shallow: true, only: [:new, :create, :destroy]
+    resources :bookmarks, shallow: true, only: [:new, :show, :create, :destroy] do
+      resources :movies, shallow: true, only: [:show]
+    end
   end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

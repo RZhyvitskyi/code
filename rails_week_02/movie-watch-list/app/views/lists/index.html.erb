@@ -4,7 +4,7 @@
   <% @user.lists.each do |list| %>
     <%= link_to list, class: "list-group-item w-50" do %>
       <div class="d-flex justify-content-between align-items-center">
-        <h4 class="m-0"><%= list.name %></h4>
+        <p class="m-0"><%= list.name %></p>
         <%= button_to "Delete list", list, method: :delete, class: "btn btn-danger" %>
       </div>
     <% end %>  
