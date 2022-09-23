@@ -7,7 +7,11 @@ class BookmarksController < ApplicationController
   end
 
   def search
-    @movies = Movie.search_by_title(params[:title])
+    if params[:title] == ""
+      get_movies
+    else
+      @movies = Movie.search_by_title(params[:title], @list)
+    end
     @bookmark = Bookmark.new
     render :new
   end

@@ -10,8 +10,8 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item me-3">
-            <% if @list && !@list.id.nil? && (current_page?(new_list_bookmark_path(@list)) || current_page?(search_path(@list)))  %>
-              <%= form_with url: search_path(@list), method: :get do |f| %>
+            <% if @list && !@list.id.nil? && (current_page?(new_list_bookmark_path(@list)) || current_page?(search_path(@list))) %>
+              <%= form_with url: search_path(@list), method: :get, class: "d-flex align-items-center gap-2"  do |f| %>
                 <%= f.text_field :title %>
                 <%= f.submit "Search", class: "btn btn-primary" %>
               <% end %>

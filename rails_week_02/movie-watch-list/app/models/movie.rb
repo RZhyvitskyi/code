@@ -1,6 +1,6 @@
 class Movie < ApplicationRecord
   scope :not_in_list, ->(list) { where.not(id: list.movies) }
-  scope :search_by_title, ->(title) { where("lower(title) LIKE ?", "%#{title.downcase}%") }
+  scope :search_by_title, ->(title, list) { where("lower(title) LIKE ?", "%#{title.downcase}%").where.not(id: list.movies) }
 
   has_many :bookmarks, dependent: :restrict_with_error
 
