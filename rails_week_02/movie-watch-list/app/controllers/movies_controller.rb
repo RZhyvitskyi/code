@@ -7,5 +7,11 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find(params[:id])
+    @params = params
+
+    if @params.has_key?(:list)
+      @list = List.find(params[:list])
+      @bookmark = Bookmark.new()
+    end
   end
 end

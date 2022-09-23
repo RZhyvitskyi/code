@@ -1,13 +1,18 @@
 class BookmarksController < ApplicationController
   before_action :get_movies, only: [:new]
-  before_action :get_list, only: [:new, :create]
+  before_action :get_list, only: [:new]
 
   def new
     @bookmark = Bookmark.new
+    @movies = @movies.reject do |movie|
+      @list.bookmarks.any? { |bookmark| bookmark.movie_id == movie.id }
+    end
   end
 
   def create
+    @list = List.find(params[:list_id])
     @bookmark = Bookmark.new(bookmark_params)
+
     @bookmark.list = @list
     if @bookmark.save
       redirect_to @list, notice: 'Bookmark was successfully created.'
@@ -25,7 +30,11 @@ class BookmarksController < ApplicationController
   private
 
   def bookmark_params
-    params.require(:bookmark).permit(:movie_id, :comment)
+    if params.has_key?(:bookmark)
+      params.require(:bookmark).permit(:movie_id, :comment)
+    else
+      params.permit(:movie_id, :comment, :list_id)
+    end
   end
 
   def get_movies

@@ -1,8 +1,19 @@
 <h2 class="mb-5">Movie info</h2>
-<div class="d-flex flex-column mb-3">
-  <h3><%= @movie.title %></h3>
-  <p><%= @movie.overview %></p>
-  <p>Rating: <%= @movie.rating %></p>
+<div class="row">
+  <div class="col-md-4">
+    <h3><%= @movie.title %></h3>
+    <p><%= @movie.overview %></p>
+    <p>Rating: <%= @movie.rating %></p>
 
-  <%= image_tag @movie.poster_url, class: "w-50 mb-3" %>
+    <% if @params.has_key?(:list) %>
+      <%= form_with url: list_bookmarks_path(@list), method: :post, class: "d-flex flex-column align-items-start gap-2" do |f| %>
+        <%= f.hidden_field :movie_id, value: @movie.id %>
+        <%= f.text_area(:comment, size: '25x2') %>
+        <%= f.submit "Add bookmark", class: "btn btn-primary" %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="col-md-8">
+    <%= image_tag @movie.poster_url, class: "w-50 mb-3" %>
+  </div>
 </div>
