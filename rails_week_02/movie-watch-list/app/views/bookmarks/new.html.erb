@@ -1,34 +1,11 @@
 <h2 class="mb-5">Movie list</h2>
+
 <div class="mb-3 row row-cols-1 row-cols-md-2 g-3">
   <% @movies.each do |movie| %>
-    <div class="col">
-      <div class="card mb-3">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <%= link_to movie, class: "text-decoration-none text-black" do %>
-              <%= image_tag movie.poster_url, class: "img-fluid rounded-start" %>
-            <% end %>
-          </div>
-          <div class="col-md-8 position-relative">
-            <div class="card-body">
-              <%= link_to movie, class: "text-decoration-none text-black" do %>
-                <h5 class="card-title"><%= movie.title %></h5>
-              <% end %>
-              <p class="card-text mb-0">
-                <span class="text-muted">My comments:</span>
-                <%= form_with model: [@list, @bookmark], class: "d-flex flex-column align-items-start gap-2" do |f| %>
-                  <%= f.hidden_field :movie_id, value: movie.id %>
-                  <%= f.text_area(:comment, size: '25x2') %>
-                  <%= f.submit class: "btn btn-primary card_button" %>
-                <% end %>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <%= render "movies/movie_card", movie: movie, list: @list, bookmark: @bookmark %>
   <% end %>
 </div>
+
 <div>
   <%= link_to "Back", @list, class: "btn btn-primary me-3" %>
 </div>

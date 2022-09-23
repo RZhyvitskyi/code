@@ -1,28 +1,7 @@
-
 <h2 class="mb-5"><%= @list.name %></h2>
 <div class="mb-3 row row-cols-1 row-cols-md-2 g-3">
   <% @list.bookmarks.each do |bookmark| %>
-    <div class="col">
-      <div class="card mb-3">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <%= image_tag bookmark.movie.poster_url, class: "img-fluid rounded-start" %>
-          </div>
-          <div class="col-md-8 position-relative">
-            <div class="card-body">
-              <h5 class="card-title"><%= bookmark.movie.title %></h5>
-              <p class="card-text">
-                <span class="text-muted">My comments:</span>
-                <%= bookmark.comment %>
-              </p>
-            </div>
-            <div class="card_button">
-              <%= button_to "Delete bookmark", bookmark, method: :delete, class: "btn btn-danger" %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <%= render "movies/movie_card", movie: bookmark.movie, list: @list, bookmark: bookmark %>
   <% end %>
 </div>
 <div>
