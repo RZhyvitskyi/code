@@ -12,8 +12,9 @@
             <h5 class="card-title"><%= movie.title %></h5>
           <% end %>
           <p class="card-text mb-0">
-            <span class="text-muted">My comments:</span>
+          <span class="text-muted">My comments:</span>
           <% if current_page?(@list) %>
+          <p class="mb-0"><%= bookmark.comment %></p>
             <div class="card_button">
               <%= button_to "Delete bookmark", bookmark, method: :delete, class: "btn btn-danger" %>
             </div>
