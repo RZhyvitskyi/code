@@ -12,8 +12,15 @@
         <%= f.submit "Add bookmark", class: "btn btn-secondary" %>
       <% end %>
     <% end %>
+
   </div>
-  <div class="col-md-8">
-    <%= image_tag @movie.poster_url, class: "w-50 mb-3" %>
+  <div class="col-md-5 d-flex justify-content-center">
+    <%= image_tag @movie.poster_url, class: "w-75" %>
+  </div>
+
+  <div class="col-md-3">
+    <% @movie.reviews.each do |review| %>
+      <%= render "review", review: review %>
+    <% end %>
   </div>
 </div>
