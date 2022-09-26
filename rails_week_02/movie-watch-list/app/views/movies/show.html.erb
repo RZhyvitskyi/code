@@ -19,8 +19,11 @@
   </div>
 
   <div class="col-md-3">
-    <% @movie.reviews.each do |review| %>
-      <%= render "review", review: review %>
-    <% end %>
+    <h5 class="mb-3">Reviews:</h5>
+    <div class="list-group">
+      <% @movie.reviews.each do |review| %>
+        <%= render "review", review: review %>
+      <% end %>
+    </div>
   </div>
 </div>

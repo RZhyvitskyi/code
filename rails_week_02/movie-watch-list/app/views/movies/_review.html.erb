@@ -1,9 +1,7 @@
-<div class="card mb-3">
-  <div class="card-header d-flex justify-content-between">
-    <h5><%= review.user.name %></h5>
+<div class="list-group-item d-flex justify-content-between align-items-start">
+  <div class="ms-2 me-auto">
+    <div class="fw-bold"><%= review.user.name %></div>
+    <%= review.comment %>
+  </div>
     <span><%= review.rating %></span>
-  </div>
-  <div class="card-body">
-    <p class="card-text"><%= review.comment %></p>
-  </div>
 </div>
