@@ -4,6 +4,7 @@ class BookmarksController < ApplicationController
 
   def new
     @bookmark = Bookmark.new
+    @search = true
   end
 
   def search
@@ -13,6 +14,7 @@ class BookmarksController < ApplicationController
       @movies = Movie.search_by_title(params[:title], @list)
     end
     @bookmark = Bookmark.new
+    @search = true
     render :new
   end
 
